@@ -1,0 +1,88 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #000000, #0a2e2e);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+/* WATERMARK */
+body::before {
+    content: "Name: Prithvi\A Roll No: 2511981193";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    font-size: 18px;
+    color: rgba(0, 255, 255, 0.415);
+
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.25);
+
+    white-space: pre-line; 
+    text-align: right;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* CONTAINER */
+.container {
+    background: rgba(0, 139, 139, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+
+    color: aliceblue;
+    padding: 30px;
+    border-radius: 15px;
+
+    width: 320px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+
+    position: relative;
+    z-index: 1;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUT LABELS */
+p {
+    margin: 10px 0 5px;
+}
+
+/* INPUT FIELDS */
+.input {
+    width: 100%;
+    font-size: 18px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    padding: 5px;
+
+    outline: none;
+}
+
+/* INPUT FOCUS EFFECT */
+.input:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+/* RESULT TEXT */
+.payment {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
