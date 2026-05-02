@@ -7,34 +7,41 @@
 body {
     background: linear-gradient(135deg, #000000, #0a2e2e);
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-family: 'Courier New', Courier, monospace;
     position: relative;
 }
 
-/* WATERMARK */
-body::before {
-    content: "Name: Prithvi\A Roll No: 2511981193";
+/* ABOUT BUTTON*/
+.about-btn {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
 
-    font-size: 18px;
-    color: rgba(0, 255, 255, 0.415);
+    padding: 8px 15px;
+    font-size: 14px;
 
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.25);
+    background: transparent;
+    color: cyan;
+    border: 1px solid cyan;
+    border-radius: 6px;
 
-    white-space: pre-line; 
-    text-align: right;
-
-    pointer-events: none;
-    z-index: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
 }
 
-/* CONTAINER */
+.about-btn:hover {
+    background: cyan;
+    color: black;
+}
+
+/* CONTAINER (CALCULATOR)*/
 .container {
     background: rgba(0, 139, 139, 0.25);
     backdrop-filter: blur(10px);
@@ -70,7 +77,6 @@ p {
     border-radius: 6px;
     border: none;
     padding: 5px;
-
     outline: none;
 }
 
@@ -85,4 +91,57 @@ p {
     font-weight: 600;
     font-size: 20px;
     text-align: center;
+}
+
+/* ABOUT SECTION*/
+.about {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+
+    width: 300px;
+    padding: 15px;
+
+    background: rgba(0, 139, 139, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid cyan;
+    border-radius: 10px;
+
+    color: aliceblue;
+    font-size: 14px;
+    line-height: 1.5;
+
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+
+    display: none;
+    z-index: 2;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* SOCIAL LINKS*/
+.social-links {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 6px 12px;
+
+    border: 1px solid cyan;
+    border-radius: 6px;
+    color: cyan;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: cyan;
+    color: black;
 }
