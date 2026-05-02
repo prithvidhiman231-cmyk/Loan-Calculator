@@ -7,20 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!--ABOUT BUTTON-->
+    <button id="about-btn" class="about-btn">About</button>
+
+    <!--CALCULATOR-->
     <div class="container">
         <h1>Loan Calculator</h1>
-        <P>Loan Amount($)
-                <input onchange="calculateLoan()" class="input" type="number" id="loan-amount" min="1" max="500000" value="10000">
-        </P>
-        <P>Interest Rate(%)
-                <input onchange="calculateLoan()" class="input" type="number" id="interest-rate" min="0" max="100" value="10" step=".1">
-        </P>
-        <P>Month to pay
-                <input onchange="calculateLoan()" class="input" type="number" id="months-to-pay" min="6" max="48" value="12">
-        </P>
-        <p class="payment" id="payment"> Monthly Payment($):</p>
+
+        <p>Loan Amount ($)
+            <input onchange="calculateLoan()" class="input" type="number" id="loan-amount" min="1" max="500000" value="10000">
+        </p>
+
+        <p>Interest Rate (%)
+            <input onchange="calculateLoan()" class="input" type="number" id="interest-rate" min="0" max="100" value="10" step=".1">
+        </p>
+
+        <p>Months to Pay
+            <input onchange="calculateLoan()" class="input" type="number" id="months-to-pay" min="6" max="48" value="12">
+        </p>
+
+        <p class="payment" id="payment">Monthly Payment ($):</p>
     </div>
-    
+
+    <!--ABOUT SECTION-->
+    <div class="about" id="about-section">
+        <h2>About Project</h2>
+
+        <p><strong>Name:</strong> Prithvi</p>
+        <p><strong>Roll No:</strong> 2511981193</p>
+        <p><strong>University:</strong> Chitkara University</p>
+
+        <p>
+            This project is a Loan Calculator that calculates monthly EMI based on 
+            loan amount, interest rate, and duration using HTML, CSS, and JavaScript.
+        </p>
+
+        <!--SOCIAL LINKS-->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/prithvi-dhiman-1a5546402" target="_blank">LinkedIn</a>
+            <a href="https://github.com/prithvidhiman231-cmyk" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <!--JS FILE-->
     <script src="index.js"></script>
+
 </body>
 </html>
